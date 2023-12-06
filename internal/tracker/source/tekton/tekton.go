@@ -519,6 +519,9 @@ func prepareContentAndSourceLinks(i *PreparePackageInput) (string, string) {
 	case "gitlab.com":
 		contentURL = fmt.Sprintf("%s/-/raw/%s/%s%s/%s.yaml", repoBaseURL, branch, pkgsPath, pkgRelativePath, i.PkgName)
 		sourceURL = fmt.Sprintf("%s/-/blob/%s/%s%s/%s.yaml", repoBaseURL, branch, pkgsPath, pkgRelativePath, i.PkgName)
+	case "github.example.com":
+		contentURL = fmt.Sprintf("%s/-/raw/%s/%s%s/%s.yaml", repoBaseURL, branch, pkgsPath, pkgRelativePath, i.PkgName)
+		sourceURL = fmt.Sprintf("%s/-/blob/%s/%s%s/%s.yaml", repoBaseURL, branch, pkgsPath, pkgRelativePath, i.PkgName)
 	}
 
 	return contentURL, sourceURL
